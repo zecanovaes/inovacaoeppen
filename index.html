@@ -1,0 +1,545 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta property="og:image" content="http://inovacaoeppen.com/eventofb.png" />
+<title>Universidade como Pólo de Inovação</title>
+<link rel="icon" type="image/x-icon" href="\favicon.ico" />
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<style>
+
+body {
+	overflow:hidden;
+	width:100%;
+	height:100%;
+	position:absolute;
+	margin-top:0;
+	margin-left:0;
+	min-height:50vw;
+	background-color:#eff7f0;
+}
+
+#hideAll
+ {
+	position: fixed;
+	left: 0px; 
+	right: 0px; 
+	top: 0px; 
+	bottom: 0px; 
+	background-color:#eff7f0;
+	z-index: 99; /* Higher than anything else in the document */
+
+ }
+ 
+.pg2, .pg3, .pg4, .pg5 {
+	position:absolute;
+	width:90%;
+	height:100%;
+	left:10%;
+ 	overflow:hidden;
+}
+
+.pg2 {	top:100%; }
+.pg3 {	top:200%; }
+.pg4 {	top:300%; }
+.pg5 {	top:400%; }
+
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+	left:15%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.conteudo {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+	padding-bottom:45%;
+	background-image:url(logo.png);
+	background-position:top;
+	background-size:contain;
+	background-repeat:no-repeat;
+	margin-bottom:-9%;
+}
+
+.conteudo2, .conteudo3, .conteudo4 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 4.5vmin;
+	line-height:6vmin;
+	padding:7%;
+}
+.conteudo2 {
+	text-align:justify;
+	display:table-cell;
+	vertical-align:middle;
+}
+.conteudo3 {
+	text-align:center;
+}
+.conteudo4{
+	text-align:justify;
+}
+.scroll, .scroll2 {
+	position:absolute;
+	height:100%;
+	width:100%;
+	left:0;
+	top:0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.scroll {
+	display:table;
+}
+.bare{
+	position:fixed;
+	top:0;
+	height:200%;
+	width:0%;
+	left:0;
+	background-color:#343736;
+}
+
+.bare, .botoes, .efetuada, .white {
+   -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: all;
+  -moz-transition-property:all;
+  -o-transition-property: all;
+  transition-property: all;
+}
+.tituloev, .tituloin, .tituloag, .tituloco {
+	position:absolute;
+	height:100%;
+	width:10%;
+	background-color:#343736;
+	left:0
+}
+.tituloev {
+	top:100%;
+}
+.tituloin {
+	top:200%;
+}
+.tituloag {
+	top:300%;
+}
+.tituloco {
+	top:400%;
+}
+
+.tituloev img, .tituloin img, .tituloag img, .tituloco img {
+	width:95%;
+	bottom:0;
+	position:absolute;
+}
+
+.menu {
+	width:100%;
+	padding-bottom:9%;
+	margin-bottom:3%;
+}
+
+.m1, .m2, .m3, .m4 {
+	height:10%;
+	position:absolute;
+	padding-top:1%;
+}
+.m1 {
+	left:1%;
+	width:18%;
+}
+.m2 {
+	left:23%;
+	width:27%;
+}
+.m3 {
+	left:55%;
+	width:20%;
+}
+.m4 {
+	left:79%;
+	width:20%;
+}
+
+
+::-webkit-scrollbar{
+	width: 1.9vmin;
+}
+
+::-webkit-scrollbar-track-piece{
+	background-color: #FFFFFF;
+	visibility:hidden;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: #cce7d1;
+}
+
+::-webkit-scrollbar-thumb:hover{
+	background-color: #a3b8a7;
+}
+
+.face {
+	position:absolute;
+	right:25%;
+	left:25%;
+	bottom:10%;
+	padding-bottom:33%;
+	background-image:url(eventoprint.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+}	
+.right {
+	text-align:right;
+}
+
+.palestras {
+	background-color:#FFFFFF;
+	padding:7%;
+	border-right: solid 6vmin #343736;
+	border-left: solid 6vmin #343736;
+
+}
+.botoes {
+	position:fixed;
+	width:0%;
+	padding-bottom:11%;
+	background-color:#65A290;
+	top:0;
+	left:0;
+}
+
+.sobe, .desce {
+	background-repeat:no-repeat;
+	width:100%;
+	height:50%;
+	background-size: 50%;
+	background-position:center;
+	position:absolute;
+}
+.sobe {
+	background-image:url(up.png);
+}
+.desce {
+	background-image:url(down.png);
+	top:50%;
+	display:none;
+}
+
+.topo {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+input[type='text'], input:not([type]), textarea {
+  font-size: 4vmin;
+  width:100%;
+  margin-bottom:5%;
+  background-color:#cce7d1;
+  outline:none;
+  border:none;
+  padding:1%;
+}
+.form {
+	position:absolute;
+	width:70%;
+	left:15%;
+	text-align:left;
+	margin-top:5%;
+}
+
+.jfk-button {
+	font-size: 4vmin;
+	text-align:center;
+	padding:2%;
+	background-color:#343736;
+	color:#FFFFFF;
+	outline:none;
+	border:none;
+	margin-top:10%;
+    margin-bottom:10%;
+	position:absolute;
+	width:50%;
+	right:0;
+	cursor:pointer;
+}
+.ss-q-title {
+font-weight:bold;
+margin-bottom:2%;
+}
+.efetuada {
+	visibility:hidden;
+	font-size:7vmin;
+	float:right;
+}
+
+</style>
+
+<body>
+
+<div class="bare" id="bare">
+</div>
+<div class="pag" id="topo">
+<div class="outer">
+<div class="middle">
+<div class="conteudo">
+</div>
+
+<div class="menu">
+<a href="#evento" onclick="OpenSel(1)"><div class="m1"></div></a>
+<a href="#inscricao" onclick="OpenSel(3)"><div class="m2"></div></a>
+<a href="#agenda" onclick="OpenSel(4)"><div class="m3"></div></a>
+<a href="#contato" onclick="OpenSel(4)"><div class="m4"></div></a>
+</div>
+</div>
+</div>
+</div>
+<div class="pg2" id="evento" >
+<div class="scroll">
+<div class="conteudo2">
+O Seminário será realizado na Escola Paulista de Economia, Política e Negócios (EPPEN) da UNIFESP, em Osasco/SP e contará com a participação de especialistas que atuam no tema de inovação. O evento visa promover a geração e difusão de conhecimento sobre temas transversais relacionados à mudança tecnológica. 
+Nesta primeira edição o foco do seminário será a contribuição das universidades brasileiras na geração de conhecimento e propriedade intelectual frente às interações com o setor produtivo, sendo voltado à comunidade acadêmica em geral, envolvendo de alunos de graduação a pesquisadores.
+
+</div></div>
+</div>
+
+<div class="pg3" id="inscricao" >
+<div class="scroll2">
+<div class="conteudo2">
+<div class="form">
+
+<script type="text/javascript">var submitted=false;</script>
+<iframe name="hidden_iframe" id="hidden_iframe"
+style="display:none;" onload="if(submitted) OpenSel(5)"></iframe>
+<form action="https://docs.google.com/forms/d/1jUU_eeFFOxbXNcb15EbdTQwhDEjUuOTD_OJ5GWZIfC4/formResponse" method="post"
+target="hidden_iframe" onsubmit="submitted=true;">
+
+<div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1210027727"><div class="ss-q-title">Nome
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1210027727" value="" class="ss-q-short" id="entry_1210027727" dir="auto" aria-label="Nome  " title="">
+<div class="error-message" id="1687678785_errorMessage"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1749429203"><div class="ss-q-title">E-mail
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1749429203" value="" class="ss-q-short" id="entry_1749429203" dir="auto" aria-label="E-mail  " title="">
+<div class="error-message" id="595864347_errorMessage"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1090943200"><div class="ss-q-title">R.G. (para emissão do certificado)
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1090943200" value="" class="ss-q-short" id="entry_1090943200" dir="auto" aria-label="R.G. (para emissão do certificado)  " title="">
+<div class="error-message" id="1937108071_errorMessage"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1464519764"><div class="ss-q-title">Possui vínculo com a Unifesp?
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1464519764" value="" class="ss-q-short" id="entry_1464519764" dir="auto" aria-label="Possui vínculo com a Unifesp?  " title="">
+<div class="error-message" id="1096199693_errorMessage"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_310088255"><div class="ss-q-title">Caso seja aluno, selecione o curso:
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="Caso seja aluno, selecione o curso:  "><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Administra&ccedil;&atilde;o" id="group_1404562246_1" role="radio" class="ss-q-radio" aria-label="Administra&ccedil;&atilde;o"></span>
+<span class="ss-choice-label">Administração</span>
+</label> 
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Atuariais" id="group_1404562246_2" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Atuariais"></span>
+<span class="ss-choice-label">Ciências Atuariais</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Cont&aacute;beis" id="group_1404562246_3" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Cont&aacute;beis"></span>
+<span class="ss-choice-label">Ciências Contábeis</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Econ&ocirc;micas" id="group_1404562246_4" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Econ&ocirc;micas"></span>
+<span class="ss-choice-label">Ciências Econômicas</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Rela&ccedil;&otilde;es Internacionais" id="group_1404562246_5" role="radio" class="ss-q-radio" aria-label="Rela&ccedil;&otilde;es Internacionais"></span>
+<span class="ss-choice-label">Relações Internacionais</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Outros Campi" id="group_1404562246_6" role="radio" class="ss-q-radio" aria-label="Outros Campi"></span>
+<span class="ss-choice-label">Outros Campi</span>
+</label></li></ul>
+<div class="error-message" id="310088255_errorMessage"></div>
+</div></div></div>
+<input type="hidden" name="draftResponse" value="[,,&quot;-4526870075589711914&quot;]
+">
+<input type="hidden" name="pageHistory" value="0">
+
+<input type="hidden" name="fvv" value="0">
+
+
+<input type="hidden" name="fbzx" value="-4526870075589711914">
+
+<div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
+
+<input type="submit" name="submit" value="Enviar Inscrição" id="ss-submit" class="jfk-button jfk-button-action ">
+</td>
+</tr></tbody></table></div></ol><div class="efetuada" id="efetuada">Inscrição efetuada!</div></form></div>
+</div></div>
+</div>
+
+<div class="pg4" id="agenda">
+<div class="scroll2">
+<div class="conteudo4">
+<div class="palestras">
+DIA 12/11, às 10h<br />
+<b>Prof. Dr. Renato de Castro Garcia</b><br />
+Palestra: "Tema 1"
+<br />______________________
+<br /><br />
+<div class="right">
+DIA 12/11, às 11h<br />
+<b>Prof. Dr. Jair Ribeiro Chagas</b><br />
+Palestra: "Tema 2"
+<br />______________________
+</div>
+<br />
+DIA 12/11, às 12h<br />
+<b>Profa. Dra. Anapatrícia Morales Vilha</b><br />
+Palestra: "Tema 3"
+<br />______________________
+<br /><br />
+<div class="right">
+DIA 12/11, às 13h<br />
+<b>Daniela Diógenes</b><br />
+Palestra: "Tema 4"
+</div>
+</div>
+<br />
+<br />
+<b>Prof. Dr. Renato de Castro Garcia</b>
+<br /><br />
+Economista, graduado pela Universidade Estadual Paulista Júlio de Mesquita Filho (1991), Mestre (1996) e Doutor (2001) em Economia pela Universidade Estadual de Campinas. Foi Professor do Departamento de Engenharia de Produção da Escola Politécnica da Universidade de São Paulo de 2002 a 2014. Atualmente é professor do Instituto de Economia da Universidade Estadual de Campinas, em regime de dedicação exclusiva (MS3; RDIDP). É editor-adjunto da Revista Brasileira de Inovação e coordena um projeto de pesquisa, com apoio da Fapesp, sobre o tema "Geografia da Inovação". Seus trabalhos de pesquisa estão inseridos na área de Economia, com ênfase em Economia Industrial e da Tecnologia, atuando principalmente em temas como geografia da inovação, sistemas locais de produção e aglomerações de empresas, interações universidade-empresa, indústria brasileira, política industrial, estratégias empresariais e metodologia de análise regional.
+<br /><br /><br />
+
+<b>Prof. Dr. Jair Ribeiro Chagas</b>
+<br /><br />
+
+Graduado em Farmácia e Bioquímica, Universidade de São Paulo - USP (1979), Mestrado e Doutorado em Ciências Biológicas (Biologia Molecular), Universidade Federal de São Paulo (UNIFESP 1988-1993) e pós-doutorado em Bioquímica e Enzimologia de Proteases na Universidade François Rabelais, Tours, França (1995-1996). Trabalhou por oito anos na Hoechst do Brasil Química e Farmacêutica (atual Aventis) na área de novos medicamentos, retornando à UNIFESP em 1988. Ingressou como professor Adjunto no Departamento de Biofísica da UNIFESP em 1993. Foi pró-reitor de pesquisa e pós graduação da Universidade de Mogi das Cruzes (UMC), de 1999 a 2006, em licença sem vencimento da UNIFESP, no período de 1999 a 2004. Participou da criação dos programas de pós-graduação, mestrado e doutorado, em Biotecnologia e Engenharia Biomédica da UMC. Retornou à Unifesp em dedicação exclusiva desde 2006 onde é Professor Associado do Departamento de Biociências e orientador dos programas de pós graduação em Psicobiologia e programa de pós-graduação Interdisciplinar em Ciências da Saúde. Atualmente é o diretor do Núcleo de Inovação Tecnológica - NIT/UNIFESP. 
+<br /><br /><br />
+
+<b>Profa. Dra. Anapatrícia Morales Vilha</b>
+<br /><br />
+Graduada em Administração Empresarial e Negócios, Mestre em Administração e Doutora em Política Científica e Tecnológica pela UNICAMP. Professora do Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas (CECS) e do Programa de Mestrado em Ciências Humanas e Sociais da Universidade Federal do ABC (UFABC). Atualmente é Coordenadora da Agência de Inovação da UFABC e Líder do Grupo de Estudos Avançados em Política e Gestão de Ciência, Tecnologia e Inovação - GEACTI/UFABC. Na pesquisa recente, tem se dedicado ao estudo de temas como: Estratégia competitiva e de inovação; Gestão de tecnologia e inovação; Gestão de inovação em economias emergentes; Tecnologia, inovação e desenvolvimento sustentável; Economia da inovação tecnológica; Estratégias empresariais; Políticas de ciência, tecnologia e inovação e Empreendedorismo. Lecionou e coordenou programas de graduação e pós-graduação em Administração e Gestão Estratégica da Inovação Tecnológica. Possui livros e trabalhos publicados em periódicos especializados e em eventos nacionais e internacionais. 
+</div></div>
+</div>
+
+
+<div class="pg5" id="contato">
+<div class="scroll">
+<div class="conteudo3">
+<center>Entre em contato conosco através do e-mail: <b>contato@inovacaoeppen.com</b>
+<br />
+<a href="https://www.facebook.com/events/173347009676539/?ref=3&ref_newsfeed_story_type=regular&feed_story_type=117&action_history=null"><div class="face"></div></a>
+</center>
+</div>
+
+</div>
+</div>
+<div class="tituloev">
+<img src="evento.png" / id="ieven"></div>
+<div class="tituloin">
+<img src="inscricoes.png" / id="iinsc"></div>
+<div class="tituloag">
+<img src="agenda.png" / id="iagen"></div>
+<div class="tituloco">
+<img src="contato.png" / id="icont"></div>
+<div class="botoes" id="botoes"><a href="#topo" onclick="OpenSel(2)"><div class="sobe"></div></a>
+<a href="#inscricao" onclick="OpenSel(3)"><div class="desce" id="desce"></div></a>
+<a href="#agenda" onclick="OpenSel(4)"><div class="desce" id="desce2" ></div></a>
+<a href="#contato"><div class="desce" id="desce3" ></div></div></a>
+
+<div id="hideAll">&nbsp;</div>
+</body>
+
+<script type="text/javascript">
+   document.getElementById("hideAll").style.display = "block";
+ </script> 
+
+<script type="text/javascript">
+window.onload = function() 
+  { document.getElementById("hideAll").style.display = "none"; }
+ </script>
+ <script>
+
+$(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().delay(500).animate({
+        'scrollTop': $target.offset().top
+        }, 400, 'swing');
+    });
+});
+</script>
+<script>
+$('a').click(function(e){
+    e.preventDefault();
+    var loc = $(this).data('redir');
+    window.location = loc;
+}
+</script>
+
+<script>
+
+function OpenSel(e){1==e?(
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%",
+	document.getElementById("desce").style.display="block",
+	document.getElementById("desce2").style.display="none",
+	document.getElementById("desce3").style.display="none"
+):2==e?(
+	document.getElementById("bare").style.width="0%",
+	document.getElementById("botoes").style.width="0%"
+):3==e?(
+	document.getElementById("desce2").style.display="block",
+	document.getElementById("desce").style.display="none",
+	document.getElementById("desce3").style.display="none",
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%"
+):4==e?(
+	document.getElementById("desce3").style.display="block",
+	document.getElementById("desce").style.display="none",
+	document.getElementById("desce2").style.display="none",
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%"
+):5==e&&(
+	document.getElementById("efetuada").style.visibility="visible"
+)}
+
+</script>
+</html>
