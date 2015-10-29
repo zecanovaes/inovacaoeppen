@@ -2,263 +2,114 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>PESL - Programa de Educação em Software Livre</title>
-<link rel="apple-touch-icon" sizes="57x57" href="icos/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="icos/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="icos/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="icos/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="icos/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="icos/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="icos/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="icos/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="icos/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="icos/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="icos/android-chrome-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="icos/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="icos/favicon-16x16.png" sizes="16x16">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="msapplication-TileImage" content="icos/mstile-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<meta name="viewport" content="width=device-width, minimum-scale=1.0">
-<meta name="apple-mobile-web-app-capable" content="yes" />
-
+<meta property="og:image" content="http://inovacaoeppen.com/eventofb.png" />
+<title>Universidade como Pólo de Inovação</title>
+<link rel="icon" type="image/x-icon" href="\favicon.ico" />
+</head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
 <style>
+
 body {
-	background-color:#FFFFFF;
-	-webkit-overflow-scrolling:touch;
-	-webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
-	-webkit-tap-highlight-color: transparent;
 	overflow:hidden;
 	width:100%;
 	height:100%;
 	position:absolute;
 	margin-top:0;
 	margin-left:0;
-	min-height:40vw;
+	min-height:50vw;
+	background-color:#eff7f0;
 }
 
-@-ms-viewport{
-  width: device-width;
-}
+#hideAll
+ {
+	position: fixed;
+	left: 0px; 
+	right: 0px; 
+	top: 0px; 
+	bottom: 0px; 
+	background-color:#eff7f0;
+	z-index: 99; /* Higher than anything else in the document */
 
-.rec {
-	position: absolute;
-	background-image:url(rec.png);
-	background-position:top;
-	background-repeat:no-repeat;
-	background-size:contain;
-	width: 74%;
-	padding-bottom: 20%;
-	top:-100%;
-	right:13%;
-	animation-duration: 2s;
-	animation-name: changeposition;
-	animation-iteration-count: initial;
-	animation-direction: normal;
-	animation-timing-function: ease-in-out;
-	animation-delay: 0.4s;
-	animation-fill-mode:forwards;
-}
-
-.func {
-	width:100%;
+ }
+ 
+.pg2, .pg3, .pg4, .pg5 {
+	position:absolute;
+	width:90%;
 	height:100%;
-	position:absolute;
-	background-color:#FFFFFF;
-	top:0;
-	left:0;
-	opacity: 1.0;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
+	left:10%;
+ 	overflow:hidden;
 }
 
-.cont {
-	width:40%;
-	left: 30%;
-	bottom: 10%;
-	padding-bottom:8%;
-	position:absolute;
-	background-image:url(cont.png);
-	background-position:top;
-	background-repeat:no-repeat;
-	background-size:contain;
+.pg2 {	top:100%; }
+.pg3 {	top:200%; }
+.pg4 {	top:300%; }
+.pg5 {	top:400%; }
+
+
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 70%;
+	left:15%;
 }
 
-@keyframes changeposition {
-    from {
-    top: -100%;
-  }
-   to {
-    top: 15%;
-  }
+.middle {
+    display: table-cell;
+    vertical-align: middle;
 }
 
-.inicio, .inscrever, .segundo, .terceiro {
-	position:absolute;
-	height:100%;
-	width:100%;
-	top:0;
-	scroll-behavior: smooth;
-}
-
-.inicio, .segundo, .terceiro {
-	left:0;
-}
-
-.inscrever {
-	transform: translate(100%, 0%);
-	background-color:#f26964;
-}
-
-.inscreverg {
-	background-color:#8DB372;
-	position:absolute;
-	top:0;
-	bottom:0;
-	left:0;
-	width:100%;
-	opacity: 1.0;
-    filter: alpha(opacity=100);
-}
-
-.acin, .inin {
-	position:absolute;
-	padding-bottom: 30%;
-	width:50%;
-	bottom:-30%;
-	overflow:hidden;
-}
-
-.inin {
-	right:8%;
-}
-
-.acin {
-	left:8%;
-}
-
-.in {
-	bottom:40%;
-	width: 100%;
-	position:absolute;
-	height:28%;
-}
-
-.esqinicio:hover .linac, .dirinicio:hover .linin{
-	bottom: 75%;
-}
-
-.in img, .ac img {
-	width:100%;
-	top:0;
-}
-
-.ac {
-	bottom:40%;
-	width: 100%;
-	position:absolute;
-	height:28%;
-}
-
-.linac, .linin {
-	width:100%;
-	height:4%;
-	background-color:#373435;
-	bottom:30%;
-	position:absolute;
-	left:0;
-	animation-duration: 0.3s;
-  animation-name: changebottom;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes changebottom {
-  from {
-    margin-bottom: 3%;
-  }
-
-  to {
-    margin-bottom: 0%;
-  }
-}
-.fundoinicio {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
+.conteudo {
+    margin-left: auto;
+    margin-right: auto; 
+    width: 100%;
+	padding-bottom:45%;
 	background-image:url(logo.png);
-	background-size:55%;
-	background-repeat:no-repeat;
-	background-position:center;
-}
-.circle {
-	width:100%;
-	height:100%;
-	position:absolute;
-	top:0;
-	background-image:url(circle.png);
-	background-size:54%;
-	background-repeat:no-repeat;
-	background-position:center;
-	animation-duration: 1s;
-	animation-name: rotate;
-	animation-iteration-count: 1;
-	animation-direction: normal;
-	animation-timing-function: ease-in-out;
-    animation-play-state: paused;
-}
-
-@keyframes rotate {
-from {
-	-ms-transform: rotate(0deg); /* IE 9 */
-    -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
-    transform: rotate(0deg);
-}
-to {
-	-ms-transform: rotate(360deg); /* IE 9 */
-    -webkit-transform: rotate(360deg); /* Chrome, Safari, Opera */
-    transform: rotate(360deg);
-}
-}
-
-.esqinicio {
-	position:absolute;
-	width:50%;
-	height:100%;
-	top:0;
-	left:0;
-}
-
-.dirinicio {
-	position:absolute;
-	width:50%;
-	height:100%;
-	top:0;
-	right:0;
-}
-
-.marca {
-	position:fixed;
-	width:2%;
-	padding-bottom:10%;
-	top:2vmin;
-	left:-5vmin;
-	background-position:center;
-	background-image:url(marca.png);
-	background-repeat:no-repeat;
+	background-position:top;
 	background-size:contain;
-	display:none;
+	background-repeat:no-repeat;
+	margin-bottom:-9%;
 }
 
-.mouse {
-	cursor:pointer;
+.conteudo2, .conteudo3, .conteudo4 {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-size: 4.5vmin;
+	line-height:6vmin;
+	padding:7%;
+}
+.conteudo2 {
+	text-align:justify;
+	display:table-cell;
+	vertical-align:middle;
+}
+.conteudo3 {
+	text-align:center;
+}
+.conteudo4{
+	text-align:justify;
+}
+.scroll, .scroll2 {
+	position:absolute;
+	height:100%;
+	width:100%;
+	left:0;
+	top:0;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.scroll {
+	display:table;
+}
+.bare{
+	position:fixed;
+	top:0;
+	height:200%;
+	width:0%;
+	left:0;
+	background-color:#343736;
 }
 
-
-.inicio:hover, .inscrever:hover, .segundo:hover, .terceiro:hover, .fundoinicio, .inicio, .in, .ac, .marca, .setesq, .setesq:hover, .linac, .linin, .login, .logo, .logo:hover, #loginsb:hover, #loginsb, jfk-button:hover, #ss-submit2 {
+.bare, .botoes, .efetuada, .white {
    -webkit-transition-duration: 0.5s;
   -moz-transition-duration: 0.5s;
   -o-transition-duration: 0.5s;
@@ -268,228 +119,60 @@ to {
   -o-transition-property: all;
   transition-property: all;
 }
-
-.ss-q-title {
-  color: #373435;
-  font-weight: 400;
-  font-size: 2vw;
-  font-style: normal;
-  padding-bottom:3%;
-}
-
-.ss-q-short {
-  font-size: 2vw;
-  width:96%;
-  padding:2%;
-  outline:none;
-  background:#f5f5f5;
-  border-radius:1vmin;
-  margin-bottom:4vmin;
-  border:0.3vmin solid #eee;
-}
-
-.ss-q-short2 {
-  font-size: 2.5vw;
-  width:89%;
-  padding:2%;
-  left:6%;
-  position:absolute;
-  outline:none;
-	background-color:transparent;
-  border:none;
-  outline:none;
-  color:#FFFFFF;
-  text-align:center;
-}
-
-.ss-q-short2:hover {
-	border:none;
-	outline:none;
-}
-.ss-q-short:focus {
-	box-shadow: 0 0 0.3vmin rgba(55, 70, 45, 0.4);
-}
-
-.opti {
-  font-size: 2vw;
-  width:100%;
-  padding:2%;
-  outline:none;
-  background:#f5f5f5;
-  border-radius:1vmin;
-  margin-bottom:4vmin;
-  border:0.3vmin solid #eee;
-}
-
-.opti:focus {
-	box-shadow: 0 0 0.3vmin rgba(55, 70, 45, 0.4);
-	
-}
-
-.firstel {
+.tituloev, .tituloin, .tituloag, .tituloco {
 	position:absolute;
-	width:100%;
 	height:100%;
-	top:0;
-	left:0;
-	background-size:55%;
-	background-repeat:no-repeat;
-	background-position:center;
-	animation-name: changeback;
-	animation-iteration-count: 1;
-	animation-delay: 15s;
-	animation-fill-mode:forwards;
-	opacity: 0.0;
-    filter: alpha(opacity=00);
-	background-image:url(clique.png);
+	width:10%;
+	background-color:#343736;
+	left:0
+}
+.tituloev {
+	top:100%;
+}
+.tituloin {
+	top:200%;
+}
+.tituloag {
+	top:300%;
+}
+.tituloco {
+	top:400%;
 }
 
-@keyframes changeback {
-    from {
-	opacity: 0.0;
-    filter: alpha(opacity=00);
-  }
-   to {
-	opacity: 1.0;
-    filter: alpha(opacity=100);
-  }
-}
-
-
-.form, .efetuada {
-	font-size:2vw;
-	font-weight:300;
-	color:#373435;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	position:absolute;
-	left:23%;
-	right:23%;
-	top:10%;
-	bottom:10%;
-	border-radius:3vmin;
-	background-color:#FFFFFF;
-	padding-left:3%;
-	padding-right:3%;
-}
-
-.form {
-	box-shadow:2.5vmin 2.5vmin 0vmin rgba(0,0,0,.1);
-
-
-}
-
-.efetuada {
-	background-repeat:no-repeat;
-	background-image:url(inscref.png);
-	background-size:5%;
-	background-position:center;
-	visibility:hidden;
-	opacity: 0.0;
-    filter: alpha(opacity=00);
-}
-
-.efetuada, .inscreverg, .acin, .inin, .func, #formlog, #formlogbgg{
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	-webkit-transition-delay: 1s; /* Safari */
-    transition-delay: 1s;
-}
-
-.inscreverg, .acin, .inin, .func {
-	-webkit-transition-property: all;
-	-moz-transition-property:all;
-	-o-transition-property: all;
-	transition-property: all;
-}
-.efetuada  {
-	-webkit-transition-property: background-size, filter, opacity, bottom, transform;
-	-moz-transition-property: background-size, filter, opacity, bottom, transform;
-	-o-transition-property: background-size, filter, opacity, bottom, transform;
-	transition-property: background-size, filter, opacity, bottom, transform;
-}
-.setesq {
-	position:absolute;
-	width:23%;
-	top:0;
+.tituloev img, .tituloin img, .tituloag img, .tituloco img {
+	width:95%;
 	bottom:0;
-	background-image:url(setesq.png);
-	background-position:center;
-	background-repeat:no-repeat;
-	background-size:20%;
-	left:0;
+	position:absolute;
 }
 
-.ballonin {
+.menu {
 	width:100%;
-	height:100%;
-	left:0;
-	background-image:url(ballonset.png);
-	background-repeat:no-repeat;
-	background-position:center;
-	background-size: 0%;
-	top:-25%;
+	padding-bottom:9%;
+	margin-bottom:3%;
+}
+
+.m1, .m2, .m3, .m4 {
+	height:10%;
 	position:absolute;
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	-webkit-transition-delay: 3s; /* Safari */
-    transition-delay: 3s;
-	-webkit-transition-property: all;
-	-moz-transition-property:all;
-	-o-transition-property: all;
-	transition-property: all;
+	padding-top:1%;
 }
-.setesq:hover {
-  transform: translate(-3%, 0%);
+.m1 {
+	left:1%;
+	width:18%;
 }
-
-#ss-submit2  {
-	position:absolute;
-	width:40%;
-	padding:3vmin;
- 	border-radius:1.5vmin;
-	border:0;
-	background:#f26964;
-	font-size:2vw;
-	color:#fff;
-	text-shadow:0.2vmin 0.2vmin 0px rgba(0,0,0,.1);
-	box-shadow:0vmin 0.6min 0vmin #c1524e;
-	margin-bottom:10%;
-	right:30%;
-	outline:none;
-	cursor:pointer;
+.m2 {
+	left:23%;
+	width:27%;
+}
+.m3 {
+	left:55%;
+	width:20%;
+}
+.m4 {
+	left:79%;
+	width:20%;
 }
 
-#ss-submit2:hover  {
-	background: #f05752;
-}
-
-#loginsb  {
-	position:absolute;
-	width:5%;
-	height:64%;
-	top:18%;
-	left:2%;
-	border:0;
-	background-color:transparent;
-	background-image:url(play.png);
-	background-repeat:no-repeat;
-	background-size:contain;
-	outline:none;
-	cursor:pointer;
-}
-
-#formlog:hover #loginsb {
-  transform: translate(-10%, 0%);
-}
-
-h1 {
-	font-size:1.5vw;
-	text-align:center;
-}
 
 ::-webkit-scrollbar{
 	width: 1.9vmin;
@@ -501,442 +184,291 @@ h1 {
 }
 
 ::-webkit-scrollbar-thumb{
-	background-color: #b6cea5;
-	outline: 0.3vmin solid #8DB372;
-	outline-offset: -0.3vmin;
+	background-color: #cce7d1;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-	background-color: #8DB372;
+	background-color: #a3b8a7;
 }
 
-::selection {
-  background: #EDFCEE; /* WebKit/Blink Browsers */
-}
-::-moz-selection {
-  background: #EDFCEE; /* Gecko Browsers */
-}
-
-.participar {
-	width:100%;
-	padding-bottom:5%;
-}
-
-.logo {
-	width:100%;
-	height:100%;
+.face {
 	position:absolute;
-	top:0;
-	left:0;
-	transform: translate(0%, 0%);
+	right:25%;
+	left:25%;
+	bottom:10%;
+	padding-bottom:33%;
+	background-image:url(eventoprint.jpg);
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+}	
+.right {
+	text-align:right;
 }
-.logcen {
-  position:relative;
-
-}
-
-.login {
-	padding-bottom:0%;
-	left:49%;
-	right:49%;
-	position:absolute;
-	top:-60%;
+.palestras {
 	background-color:#FFFFFF;
-	border:2vmin solid #000000;
-	border-radius:3vmin;
-	font-size:2vw;
-	font-weight:300;
-	color:#373435;
-	font-family: Futura, "Trebuchet MS", Arial, sans-serif;
-	box-shadow:2.5vmin 2.5vmin 0vmin rgba(0,0,0,.1);
-	transform: translate(0%, 0%);
-}
-
-
-.contcad {
-	width:90%;
-	left:5%;
-	top:10%;
-	height:30%;
-	background-image:url(contcad.png);
+	padding:7%;
+	background-image:url(palestras.png);
 	background-repeat:no-repeat;
+	background-position:center;
+	padding-bottom:90%;
 	background-size:contain;
-	position:absolute;
+	border-right: solid 6vmin #343736;
+	border-left: solid 6vmin #343736;
 }
-
-.contmsg {
-	width:90%;
-	left:5%;
-	bottom:3%;
-	height:30%;
-	background-image:url(contmsg.png);
-	background-repeat:no-repeat;
-	background-size:contain;
-	position:absolute;
-}
-
-.exit {
-	width:3%;
-	height:6%;
-	background-image:url(x.png);
-	background-size:contain;
-	position:absolute;
-	background-repeat:no-repeat;
-	right:1%;
-	top:3%;
-}
-
-.blocklog {
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	visibility:hidden;
-	position:absolute;
-}
-
-#formlog, #formlogbgr, #formlogbgg {
-	overflow:hidden;
-	position:absolute;
-	left:5%;
-	height:20%;
-	top:40%;
-}
-#formlogbgr {
-	background:#f26964;
-}
-
-#formlog, #formlogbgr {
-	width:90%;
-}
-
-.formlogbgg {
-	background:#2D7D59;
+.botoes {
+	position:fixed;
 	width:0%;
-}
-
-#hideAll
- {
-   position: fixed;
-   left: 0px; 
-   right: 0px; 
-   top: 0px; 
-   bottom: 0px; 
-   background-color: #FFFFFF;
-   z-index: 99;
-
- }
-
-.scroll {
-	overflow-y:scroll;
-	position:absolute;
-	padding-top:9.5%;
-	padding-right:7%;
-	padding-left:7%;
-	left:3%;
-	right:3%;
-	top:1%;
-	bottom:1%;
-}
-
-
-#tela, #descetelaf {
-	position:absolute;
-	width:100%;
-	height:100%;
-	left:0;
-	border:0;
-	outline:0;
+	padding-bottom:11%;
+	background-color:#65A290;
 	top:0;
-}
-#tela {
-  transform: translate(-100%, 0%);
-}
-#descetelaf {
-	visibility:hidden;	
-}
-#forat {
-	position:absolute;
-	width:100%;
-	height:100%;
-	bottom:0;
 	left:0;
-	overflow:hidden;
-	background-repeat:repeat;
-	background-image:url(bg.png);
-	background-size: 10vw;
-	transform: translate(0%, 0%);
 }
-#tela, #forat {
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-  -webkit-transition-property: all;
-  -moz-transition-property:all;
-  -o-transition-property: all;
-  transition-property: all;
 
+.sobe, .desce {
+	background-repeat:no-repeat;
+	width:100%;
+	height:50%;
+	background-size: 50%;
+	background-position:center;
+	position:absolute;
 }
-.inscrever {
-	-webkit-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-o-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-  -webkit-transition-property: all;
-  -moz-transition-property:all;
-  -o-transition-property: all;
-  transition-property: all;
- }
+.sobe {
+	background-image:url(up.png);
+}
+.desce {
+	background-image:url(down.png);
+	top:50%;
+	display:none;
+}
+
+.topo {
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+}
+input[type='text'], input:not([type]), textarea {
+  font-size: 4vmin;
+  width:100%;
+  margin-bottom:5%;
+  background-color:#cce7d1;
+  outline:none;
+  border:none;
+  padding:1%;
+}
+.form {
+	position:absolute;
+	width:70%;
+	left:15%;
+	text-align:left;
+	margin-top:5%;
+}
+
+.jfk-button {
+	font-size: 4vmin;
+	text-align:center;
+	padding:2%;
+	background-color:#343736;
+	color:#FFFFFF;
+	outline:none;
+	border:none;
+	margin-top:10%;
+    margin-bottom:10%;
+	position:absolute;
+	width:50%;
+	right:0;
+	cursor:pointer;
+}
+.ss-q-title {
+font-weight:bold;
+margin-bottom:2%;
+}
+.efetuada {
+	visibility:hidden;
+	font-size:7vmin;
+	float:right;
+}
+
 </style>
- 
-</head>
 
 <body>
-<div id="forat">
-<div class="inicio" id="inicio">
-<div class="logo" id="logo">
-<div class="func" id="func"></div>
-<div class="circle" id="circle"></div>
-<div class="fundoinicio" id="fundoinicio"></div></div>
 
-<a onClick="OpenSel(6)" class="mouse">
-<div class="dirinicio"><div class="inin" id="inin"><div class="linin" id="linin"></div><div class="in" id="in"><img src="in.png" /></div></div></div>
-</a>
-<a onClick="OpenSel(3)" class="mouse">
-<div class="esqinicio" id="esqinicio"><div class="acin" id="acin"><div class="linac" id="linac"></div><div class="ac" id="ac"><img src="ac.png" /></div></div></div>
-</a>
-<a onClick="OpenSel(4)"><div class="blocklog" id="blocklog"> </div></a>
-<div class="login" id="login">
-
-<div class="contcad" id="contcad"></div>
-<div class="formlogbgr" id="formlogbgr"></div>
-<div class="formlogbgg" id="formlogbgg"></div>
-<div id="formlog">
-<iframe name="hidden_iframe2" id="hidden_iframe2"
-style="display:none;" onload="if(submitted) esquerda()" ></iframe>
-<form action="https://docs.google.com/forms/d/1mQePk0yD_HNEmdmfqIXQnGvhzA_0iHKEHiM-F8ss8sg/formResponse" method="post"
-target="hidden_iframe2" onsubmit="submitted=true;">
-
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
-
-<input type="text" name="entry.1385196339" autocomplete="off"  value="" class="ss-q-short2" id="entry_1385196339" dir="auto" aria-label="E-mail  " title="">
-</div></div></div>
-<input type="hidden" name="draftResponse" value="[,,&quot;2514834357131424071&quot;]
-">
-<input type="hidden" name="pageHistory" value="0">
-
-<input type="hidden" name="fvv" value="0">
-
-
-<input type="hidden" name="fbzx" value="2514834357131424071">
-
-
-<input type="submit" name="submit" value="" id="loginsb">
-</form></div>
-
-<div class="contmsg" id="contmsg"></div>
-<a onClick="OpenSel(4)" class="mouse"><div class="exit" id="exit"></div></a>
-
+<div class="bare" id="bare">
 </div>
+<div class="pag" id="topo">
+<div class="outer">
+<div class="middle">
+<div class="conteudo">
 </div>
 
-<a onClick="OpenSel(1)" class="mouse"><div class="firstel" id="firstel"></div></a>
-
-    <div class="marca" id="marca"></div>
+<div class="menu">
+<a href="#evento" onclick="OpenSel(1)"><div class="m1"></div></a>
+<a href="#inscricao" onclick="OpenSel(3)"><div class="m2"></div></a>
+<a href="#agenda" onclick="OpenSel(4)"><div class="m3"></div></a>
+<a href="#contato" onclick="OpenSel(4)"><div class="m4"></div></a>
 </div>
-<div class="inscrever" id="inscrever">
-<div class="inscreverg" id="inscreverg"></div>
-<a onClick="OpenSel(7)" class="mouse"><div class="setesq" id="setesq"><div class="ballonin" id="ballonin"></div></div></a>
-
-
-<div class="form" id="form">
-
+</div>
+</div>
+</div>
+<div class="pg2" id="evento" >
 <div class="scroll">
-<div id="txt">
-<img src="querop.png" class="participar" />
-<h1>*Caso existam dados faltantes, nosso sistema automaticamente eliminará a inscrição.</h1>
+<div class="conteudo2">
+O Seminário será realizado na Escola Paulista de Economia, Política e Negócios (EPPEN) da UNIFESP, em Osasco/SP e contará com a participação de especialistas que atuam no tema de inovação. O evento visa promover a geração e difusão de conhecimento sobre temas transversais relacionados à mudança tecnológica. 
+Nesta primeira edição o foco do seminário será a contribuição das universidades brasileiras na geração de conhecimento e propriedade intelectual frente às interações com o setor produtivo, sendo voltado à comunidade acadêmica em geral, envolvendo de alunos de graduação a pesquisadores.
+
+</div></div>
+</div>
+
+<div class="pg3" id="inscricao" >
+<div class="scroll2">
+<div class="conteudo2">
+<div class="form">
 
 <script type="text/javascript">var submitted=false;</script>
 <iframe name="hidden_iframe" id="hidden_iframe"
-style="display:none;" onload="if(submitted) OpenSel(2)"></iframe>
-<form action="https://docs.google.com/forms/d/1oDsW5ybOYf9cQcyjLszdqXX41mCI9_CN6ZQlc1MMpIU/formResponse" method="post"
+style="display:none;" onload="if(submitted) OpenSel(5)"></iframe>
+<form action="https://docs.google.com/forms/d/1jUU_eeFFOxbXNcb15EbdTQwhDEjUuOTD_OJ5GWZIfC4/formResponse" method="post"
 target="hidden_iframe" onsubmit="submitted=true;">
 
-<ol role="list" class="ss-question-list" style="padding-left: 0">
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-text">
-<div class="ss-form-entry">
-
-<label class="ss-q-item-label" for="entry_1281221358">
-
-<div class="ss-q-title">Nome</div>
-</label>
-<input type="text" autocomplete="off" name="entry.1281221358" value="" class="ss-q-short" id="entry_1281221358" dir="auto" aria-label="Nome  " title="">
-<div class="error-message" id="986343717_errorMessage"></div>
-</div></div></div>
-
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-text">
-<div class="ss-form-entry">
-
-<label class="ss-q-item-label" for="entry_419945186">
-
-<div class="ss-q-title">E-mail</div>
-</label>
-<input type="text" autocomplete="off" name="entry.419945186" value="" class="ss-q-short" id="entry_419945186" dir="auto" aria-label="E-mail  " title="">
-<div class="error-message" id="1886802668_errorMessage"></div>
-</div></div></div> 
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-text">
-<div class="ss-form-entry">
-
-<label class="ss-q-item-label" for="entry_1591128216">
-
-<div class="ss-q-title">Profissão
-</div>
-</label>
-<input type="text" autocomplete="off" name="entry.1591128216" value="" class="ss-q-short" id="entry_1591128216" dir="auto" aria-label="Profissão  " title="">
-<div class="error-message" id="338591715_errorMessage"></div>
-</div></div></div>
-
-
 <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_2126787869"><div class="ss-q-title">Possui vínculo com a Unifesp? Se sim, qual?
+<label class="ss-q-item-label" for="entry_1210027727"><div class="ss-q-title">Nome
 </div>
-</label>
-<input type="text" autocomplete="off" name="entry.2126787869" value="" class="ss-q-short" id="entry_2126787869" dir="auto" aria-label="Possui vínculo com a Unifesp? Se sim, qual?  " title="">
-<div class="error-message" id="1780872479_errorMessage"></div>
-</div></div></div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1210027727" value="" class="ss-q-short" id="entry_1210027727" dir="auto" aria-label="Nome  " title="">
+<div class="error-message" id="1687678785_errorMessage"></div>
 
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1031329332"><div class="ss-q-title">Caso seja aluno, em qual curso está matriculado?
-</div>
-</label>
-<select class="opti" autocomplete="off" name="entry.1031329332" id="entry_1031329332" aria-label="Caso seja aluno, em qual curso está matriculado?  "><option value=""></option>
-<option value="Administra&ccedil;&atilde;o">Administração</option> <option value="Ci&ecirc;ncias Atuariais">Ciências Atuariais</option> <option value="Ci&ecirc;ncias Cont&aacute;beis">Ciências Contábeis</option> <option value="Ci&ecirc;ncias Econ&ocirc;micas">Ciências Econômicas</option> <option value="Rela&ccedil;&otilde;es Internacionais">Relações Internacionais</option></select>
-</div></div></div>
-
-
-<div class="ss-form-question errorbox-good" role="listitem">
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
 <div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_1268720845"><div class="ss-q-title">De qual termo?
+<label class="ss-q-item-label" for="entry_1749429203"><div class="ss-q-title">E-mail
 </div>
-</label>
-<input type="text" autocomplete="off" name="entry.1268720845" value="" class="ss-q-short" id="entry_1268720845" dir="auto" aria-label="De qual termo?  " title="">
-<div class="error-message" id="1383106662_errorMessage"></div>
-</div></div></div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1749429203" value="" class="ss-q-short" id="entry_1749429203" dir="auto" aria-label="E-mail  " title="">
+<div class="error-message" id="595864347_errorMessage"></div>
 
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_698892183"><div class="ss-q-title">Selecione a principal área onde você pretende aplicar o projeto.
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1090943200"><div class="ss-q-title">R.G. (para emissão do certificado)
 </div>
-</label>
-<select class="opti" autocomplete="off" name="entry.698892183" id="entry_698892183" aria-label="Selecione a principal área onde você pretende aplicar o projeto.  "><option value=""></option>
-<option value="Ensino">Ensino</option> <option value="Estudo">Estudo</option> <option value="Pesquisa">Pesquisa</option> <option value="Trabalho">Trabalho</option> <option value="Outra">Outra</option></select>
-</div></div></div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1090943200" value="" class="ss-q-short" id="entry_1090943200" dir="auto" aria-label="R.G. (para emissão do certificado)  " title="">
+<div class="error-message" id="1937108071_errorMessage"></div>
 
-
-<div class="ss-form-question errorbox-good" role="listitem">
-<div dir="auto" class="ss-item  ss-select"><div class="ss-form-entry">
-<label class="ss-q-item-label" for="entry_573156317"><div class="ss-q-title">O que mais despertou sua vontade de participar?
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-text"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_1464519764"><div class="ss-q-title">Possui vínculo com a Unifesp?
 </div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+<input type="text"  autocomplete="off" name="entry.1464519764" value="" class="ss-q-short" id="entry_1464519764" dir="auto" aria-label="Possui vínculo com a Unifesp?  " title="">
+<div class="error-message" id="1096199693_errorMessage"></div>
+
+</div></div></div> <div class="ss-form-question errorbox-good" role="listitem">
+<div dir="auto" class="ss-item  ss-radio"><div class="ss-form-entry">
+<label class="ss-q-item-label" for="entry_310088255"><div class="ss-q-title">Caso seja aluno, selecione o curso:
+</div>
+<div class="ss-q-help ss-secondary-text" dir="auto"></div></label>
+
+<ul class="ss-choices" role="radiogroup" aria-label="Caso seja aluno, selecione o curso:  "><label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Administra&ccedil;&atilde;o" id="group_1404562246_1" role="radio" class="ss-q-radio" aria-label="Administra&ccedil;&atilde;o"></span>
+<span class="ss-choice-label">Administração</span>
+</label> 
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Atuariais" id="group_1404562246_2" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Atuariais"></span>
+<span class="ss-choice-label">Ciências Atuariais</span>
 </label>
-<select class="opti" autocomplete="off" name="entry.573156317" id="entry_573156317" aria-label="O que mais despertou sua vontade de participar?  "><option value=""></option>
-<option value="Aprimoramento acad&ecirc;mico">Aprimoramento acadêmico</option> <option value="Aprimoramento profissional">Aprimoramento profissional</option> <option value="Curiosidade">Curiosidade</option> <option value="Gratuidade">Gratuidade</option> <option value="Horas complementares">Horas complementares</option> <option value="Necessidade">Necessidade</option> <option value="Reputa&ccedil;&atilde;o da Unifesp">Reputação da Unifesp</option> <option value="Outros motivos">Outros motivos</option></select>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Cont&aacute;beis" id="group_1404562246_3" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Cont&aacute;beis"></span>
+<span class="ss-choice-label">Ciências Contábeis</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Ci&ecirc;ncias Econ&ocirc;micas" id="group_1404562246_4" role="radio" class="ss-q-radio" aria-label="Ci&ecirc;ncias Econ&ocirc;micas"></span>
+<span class="ss-choice-label">Ciências Econômicas</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Rela&ccedil;&otilde;es Internacionais" id="group_1404562246_5" role="radio" class="ss-q-radio" aria-label="Rela&ccedil;&otilde;es Internacionais"></span>
+<span class="ss-choice-label">Relações Internacionais</span>
+</label>
+<br />
+<label><span class="ss-choice-item-control goog-inline-block"><input type="radio" name="entry.1404562246" value="Outros Campi" id="group_1404562246_6" role="radio" class="ss-q-radio" aria-label="Outros Campi"></span>
+<span class="ss-choice-label">Outros Campi</span>
+</label></li></ul>
+<div class="error-message" id="310088255_errorMessage"></div>
 </div></div></div>
-
-
-<input type="hidden" name="draftResponse" value="[,,&quot;3696903210327481415&quot;]
+<input type="hidden" name="draftResponse" value="[,,&quot;-4526870075589711914&quot;]
 ">
 <input type="hidden" name="pageHistory" value="0">
 
 <input type="hidden" name="fvv" value="0">
 
 
-<input type="hidden" name="fbzx" value="3696903210327481415">
+<input type="hidden" name="fbzx" value="-4526870075589711914">
 
-</div>
 <div class="ss-item ss-navigate"><table id="navigation-table"><tbody><tr><td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-<input type="submit" name="submit" value="Inscrever-se" id="ss-submit2">
+
+<input type="submit" name="submit" value="Enviar Inscrição" id="ss-submit" class="jfk-button jfk-button-action ">
 </td>
-</tr></tbody></table></div></ol></form>
+</tr></tbody></table></div></ol><div class="efetuada" id="efetuada">Inscrição efetuada!</div></form></div>
+</div></div>
 </div>
 
-</div><div class="efetuada" id="efetuada"></div>
+<div class="pg4" id="agenda">
+<div class="scroll2">
+<div class="conteudo4">
+<div class="palestras">
 </div>
-<div id="descetelaf">
-<iframe id="tela">
-</iframe></div>
+<br />
+<br />
+<b>Prof. Dr. Renato de Castro Garcia</b>
+<br /><br />
+Economista, graduado pela Universidade Estadual Paulista Júlio de Mesquita Filho (1991), Mestre (1996) e Doutor (2001) em Economia pela Universidade Estadual de Campinas. Foi Professor do Departamento de Engenharia de Produção da Escola Politécnica da Universidade de São Paulo de 2002 a 2014. Atualmente é professor do Instituto de Economia da Universidade Estadual de Campinas, em regime de dedicação exclusiva (MS3; RDIDP). É editor-adjunto da Revista Brasileira de Inovação e coordena um projeto de pesquisa, com apoio da Fapesp, sobre o tema "Geografia da Inovação". Seus trabalhos de pesquisa estão inseridos na área de Economia, com ênfase em Economia Industrial e da Tecnologia, atuando principalmente em temas como geografia da inovação, sistemas locais de produção e aglomerações de empresas, interações universidade-empresa, indústria brasileira, política industrial, estratégias empresariais e metodologia de análise regional.
+<br /><br /><br />
+
+<b>Prof. Dr. Jair Ribeiro Chagas</b>
+<br /><br />
+
+Graduado em Farmácia e Bioquímica, Universidade de São Paulo - USP (1979), Mestrado e Doutorado em Ciências Biológicas (Biologia Molecular), Universidade Federal de São Paulo (UNIFESP 1988-1993) e pós-doutorado em Bioquímica e Enzimologia de Proteases na Universidade François Rabelais, Tours, França (1995-1996). Trabalhou por oito anos na Hoechst do Brasil Química e Farmacêutica (atual Aventis) na área de novos medicamentos, retornando à UNIFESP em 1988. Ingressou como professor Adjunto no Departamento de Biofísica da UNIFESP em 1993. Foi pró-reitor de pesquisa e pós graduação da Universidade de Mogi das Cruzes (UMC), de 1999 a 2006, em licença sem vencimento da UNIFESP, no período de 1999 a 2004. Participou da criação dos programas de pós-graduação, mestrado e doutorado, em Biotecnologia e Engenharia Biomédica da UMC. Retornou à Unifesp em dedicação exclusiva desde 2006 onde é Professor Associado do Departamento de Biociências e orientador dos programas de pós graduação em Psicobiologia e programa de pós-graduação Interdisciplinar em Ciências da Saúde. Atualmente é o diretor do Núcleo de Inovação Tecnológica - NIT/UNIFESP. 
+<br /><br /><br />
+
+<b>Profa. Dra. Anapatrícia Morales Vilha</b>
+<br /><br />
+Graduada em Administração Empresarial e Negócios, Mestre em Administração e Doutora em Política Científica e Tecnológica pela UNICAMP. Professora do Centro de Engenharia, Modelagem e Ciências Sociais Aplicadas (CECS) e do Programa de Mestrado em Ciências Humanas e Sociais da Universidade Federal do ABC (UFABC). Atualmente é Coordenadora da Agência de Inovação da UFABC e Líder do Grupo de Estudos Avançados em Política e Gestão de Ciência, Tecnologia e Inovação - GEACTI/UFABC. Na pesquisa recente, tem se dedicado ao estudo de temas como: Estratégia competitiva e de inovação; Gestão de tecnologia e inovação; Gestão de inovação em economias emergentes; Tecnologia, inovação e desenvolvimento sustentável; Economia da inovação tecnológica; Estratégias empresariais; Políticas de ciência, tecnologia e inovação e Empreendedorismo. Lecionou e coordenou programas de graduação e pós-graduação em Administração e Gestão Estratégica da Inovação Tecnológica. Possui livros e trabalhos publicados em periódicos especializados e em eventos nacionais e internacionais. 
+
+<br /><br /><br />
+
+<b>Leonardo Augusto Garnica</b>
+<br /><br />
+Graduado em Administração Pública pela Universidade Estadual Paulista UNESP (2004) e mestre em Engenharia de Produção pela Universidade Federal de São Carlos - UFSCar (2007) na área de gestão de tecnologia e inovação. Atuou como agente de inovação da Agência USP de Inovação da Universidade de São Paulo e coordenador do Pólo São Carlos, com foco na área de transferência de tecnologias da USP para empresas e outras organizações interessadas. Realizou estágio na Empresa de Gestão e Comercialização de Tecnologia ISIS Innovation, da University of Oxford, UK (2008). Ministrou disciplinas de graduação nas Faculdades Integradas de São Carlos (FADISC) e em cursos de pós-graduação na área de inovação, tais como Gestão do Empreendedorismo Inovador, apoiado pelo CNPq e Gestão de Parcerias de Sucesso pela UNISEB. Atualmente é Gerente Científico para Sistemas de Inovação na Natura, empresa multinacional brasileira do segmento de cosméticos. Responsável por parcerias estratégicas de inovação com instituições de ciência e tecnologia, agências de fomento e empresas inovadoras.
+</div></div>
+</div>
 
 
-<script type="text/javascript">
-function OpenSel(e){1==e?(
-	document.getElementById("acin").style.bottom="0",
-	document.getElementById("inin").style.bottom="0",
-	document.getElementById("func").style.opacity="0.0",
-	document.getElementById("func").style.filter="alpha(opacity=0)",
-	document.getElementById("marca").style.left="2vmin",
-	document.getElementById("firstel").style.display="none",
-	document.getElementById("circle").style.animationPlayState="running"
-):2==e?(
-	document.getElementById("inscreverg").style.width="0%",
-	document.getElementById("efetuada").style.opacity="1.0",
-	document.getElementById("efetuada").style.filter="alpha(opacity=100)",
-	document.getElementById("efetuada").style.visibility="visible",
-	document.getElementById("efetuada").style.backgroundSize="80%",
-	document.getElementById("ballonin").style.backgroundSize="60%"
-):3==e?(
-	document.getElementById("logo").style.transform="translate(0%,-150%)",
-	document.getElementById("login").style.left="20%",
-	document.getElementById("login").style.right="20%",
-	document.getElementById("login").style.top="15%",
-	document.getElementById("login").style.paddingBottom="25%",
-	document.getElementById("blocklog").style.visibility="visible"
-):4==e?(
-	document.getElementById("logo").style.transform="translate(0%,0%)",
-	document.getElementById("login").style.left="49%",
-	document.getElementById("login").style.paddingBottom="0%",
-	document.getElementById("login").style.right="49%",
-	document.getElementById("login").style.top="-60%",
-	document.getElementById("blocklog").style.visibility="hidden"
-):6==e?(
-	document.getElementById("forat").style.transform="translate(-100%, 0%)",
-	document.getElementById("inscrever").style.transform="translate(0%, 0%)"
-):7==e&&(
-	document.getElementById("forat").style.transform="translate(0%, 0%)",
-	document.getElementById("inscrever").style.transform="translate(100%, 0%)"
-)}
+<div class="pg5" id="contato">
+<div class="scroll">
+<div class="conteudo3">
+<center>Entre em contato conosco através do e-mail: <b>contato@inovacaoeppen.com</b>
+<br />
+<a href="https://www.facebook.com/events/173347009676539/?ref=3&ref_newsfeed_story_type=regular&feed_story_type=117&action_history=null"><div class="face"></div></a>
+</center>
+</div>
 
-</script>
+</div>
+</div>
+<div class="tituloev">
+<img src="evento.png" / id="ieven"></div>
+<div class="tituloin">
+<img src="inscricoes.png" / id="iinsc"></div>
+<div class="tituloag">
+<img src="agenda.png" / id="iagen"></div>
+<div class="tituloco">
+<img src="contato.png" / id="icont"></div>
+<div class="botoes" id="botoes"><a href="#topo" onclick="OpenSel(2)"><div class="sobe"></div></a>
+<a href="#inscricao" onclick="OpenSel(3)"><div class="desce" id="desce"></div></a>
+<a href="#agenda" onclick="OpenSel(4)"><div class="desce" id="desce2" ></div></a>
+<a href="#contato"><div class="desce" id="desce3" ></div></div></a>
 
-<script type="text/javascript">
-$("#loginsb").click(function esquerda() {
-    var timer = setTimeout(function() {
-	document.getElementById("forat").style.transform="translate(100%, 0%)";
-	document.getElementById("descetelaf").style.visibility="visible";
-	document.getElementById("tela").style.transform="translate(0%, 0%)";
-    }, 4000);
-});
-
-$("#loginsb").click(function () { 
-      $("#tela").attr("src", "primeiro/index.html");
-	 document.getElementById("formlogbgg").style.width="90%";
-	 var timer = setTimeout(function() {
-	document.getElementById("inscrever").style.display="none";
-	document.getElementById("forat").style.display="none";
-    }, 5000);
-});
-
- </script>
+<div id="hideAll">&nbsp;</div>
+</body>
 
 <script type="text/javascript">
    document.getElementById("hideAll").style.display = "block";
@@ -946,7 +478,54 @@ $("#loginsb").click(function () {
 window.onload = function() 
   { document.getElementById("hideAll").style.display = "none"; }
  </script>
- 
-<div id="hideAll">&nbsp;</div>
-</body>
+ <script>
+
+$(document).ready(function(){
+    $('a[href^="#"]').on('click',function (e) {
+        e.preventDefault();
+
+        var target = this.hash,
+        $target = $(target);
+
+        $('html, body').stop().delay(500).animate({
+        'scrollTop': $target.offset().top
+        }, 400, 'swing');
+    });
+});
+</script>
+<script>
+$('a').click(function(e){
+    e.preventDefault();
+    var loc = $(this).data('redir');
+    window.location = loc;
+}
+</script>
+
+<script>
+function OpenSel(e){1==e?(
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%",
+	document.getElementById("desce").style.display="block",
+	document.getElementById("desce2").style.display="none",
+	document.getElementById("desce3").style.display="none"
+):2==e?(
+	document.getElementById("bare").style.width="0%",
+	document.getElementById("botoes").style.width="0%"
+):3==e?(
+	document.getElementById("desce2").style.display="block",
+	document.getElementById("desce").style.display="none",
+	document.getElementById("desce3").style.display="none",
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%"
+):4==e?(
+	document.getElementById("desce3").style.display="block",
+	document.getElementById("desce").style.display="none",
+	document.getElementById("desce2").style.display="none",
+	document.getElementById("bare").style.width="10%",
+	document.getElementById("botoes").style.width="10%"
+):5==e&&(
+	document.getElementById("efetuada").style.visibility="visible"
+)}
+
+</script>
 </html>
